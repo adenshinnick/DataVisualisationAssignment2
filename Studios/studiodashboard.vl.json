@@ -1,0 +1,164 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  
+  "hconcat": [
+    {
+      "width": 350,
+      "height": 350,
+      "title": "Studio Market Share",
+      "data": {"url": "Studios/movies_per_studio_top20.csv"},
+      "params": [
+        {
+          "name": "studio_click",
+          "select": {"type": "point", "fields": ["studio"]}
+        }
+      ],
+      "transform": [
+        {"joinaggregate": [{"op": "sum", "field": "movie_count", "as": "total_count"}]},
+        {"calculate": "datum.movie_count / datum.total_count", "as": "percent_share"}
+      ],
+      "mark": {"type": "arc", "innerRadius": 80},
+      "encoding": {
+        "theta": {"field": "movie_count", "type": "quantitative", "stack": true},
+        "color": {
+          "field": "studio",
+          "type": "nominal",
+          "title": "Studio",
+          "legend": null,
+          "scale": {
+            "range": [
+              "#7b00ff", "#ff00ff", "#00ff00", "#ffff00", "#ff7f00", "#00ffff", 
+              "#ff1493", "#00bfff", "#adff2f", "#ff69b4", "#7cfc00", "#ffd700", 
+              "#ff4500", "#9400d3", "#00ff7f", "#ff0000", "#40e0d0", "#da70d6", 
+              "#ff8c00", "#32cd32"
+            ]
+          }
+        },
+        "opacity": {
+          "condition": {"param": "studio_click", "value": 1},
+          "value": 0.7
+        },
+        "tooltip": [
+          {"field": "studio", "type": "nominal", "title": "Studio"},
+          {"field": "movie_count", "type": "quantitative", "title": "Movies Produced", "format": ","},
+          {"field": "percent_share", "type": "quantitative", "title": "Share of Movies", "format": ".1%"}
+        ]
+      }
+    },
+    {
+      "data": {"url": "Studios/movies_per_studio_top20.csv"},
+      "mark": "point",
+      "encoding": {
+        "y": {
+          "field": "studio",
+          "type": "nominal",
+          "axis": {
+            "title": "",
+            "orient": "right",
+            "labelFontSize": 14,
+            "titleFontSize": 16
+          }
+        },
+        "color": {
+          "field": "studio",
+          "type": "nominal",
+          "legend": null,
+           "scale": {
+            "range": [
+              "#7b00ff", "#ff00ff", "#00ff00", "#ffff00", "#ff7f00", "#00ffff", 
+              "#ff1493", "#00bfff", "#adff2f", "#ff69b4", "#7cfc00", "#ffd700", 
+              "#ff4500", "#9400d3", "#00ff7f", "#ff0000", "#40e0d0", "#da70d6", 
+              "#ff8c00", "#32cd32"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "vconcat": [
+        {
+          "width": 350,
+          "height": 350,
+          "title": "Genre Breakdown",
+          "data": {"url": "Studios/genres_per_studio_top20.csv"},
+          "transform": [
+            {"filter": "isDefined(studio_click.studio) ? datum.studio == studio_click.studio : datum.studio == '20th Century Fox'"},
+            {"joinaggregate": [{"op": "sum", "field": "count", "as": "total_count"}], "groupby": ["studio"]},
+            {"calculate": "datum.count / datum.total_count", "as": "percent"},
+            {"stack": "count", "as": ["y_start", "y_end"], "groupby": ["studio"], "offset": "normalize"},
+            {"calculate": "(datum.y_start + datum.y_end) / 2", "as": "y_mid"}
+          ],
+          "layer": [
+            {
+              "mark": {"type": "bar", "tooltip": true},
+              "encoding": {
+                "y": {
+                  "field": "y_start",
+                  "type": "quantitative",
+                  "axis": {"title": "Proportion of Movies", "format": "%","labelFontSize": 14,"titleFontSize": 16}
+                },
+                "y2": {"field": "y_end"},
+                "color": {"field": "genre", "type": "nominal", "title": "Genre", "scale": {"scheme": "tableau20"}},
+                "tooltip": [
+                  {"field": "studio", "type": "nominal"},
+                  {"field": "genre", "type": "nominal"},
+                  {"field": "count", "type": "quantitative", "format": ","},
+                  {"field": "percent", "type": "quantitative", "format": ".1%"}
+                ]
+              }
+            },
+            {
+              "mark": {"type": "text", "fill": "white", "fontWeight": "bold"},
+              "encoding": {
+                "y": {"field": "y_mid", "type": "quantitative"},
+                "text": {"field": "genre", "type": "nominal"},
+                "opacity": {
+                  "condition": {"test": "datum.percent > 0.04", "value": 1},
+                  "value": 0
+                }
+              }
+            }
+          ],
+          "encoding": {
+            "x": {
+              "field": "studio",
+              "type": "nominal",
+              "title": null,
+              "axis": {"labels": false, "ticks": false, "domain": false}
+            }
+          }
+        },
+        {
+          "height": 20,
+          "width": 450,
+          "data": {"url": "Studios/genres_per_studio_top20.csv"},
+           "transform": [
+            {"filter": "isDefined(studio_click.studio) ? datum.studio == studio_click.studio : datum.studio == '20th Century Fox'"}
+          ],
+          "mark": {"type": "text", "fontSize": 14, "fontWeight": "bold"},
+          "encoding": {"text": {"field": "studio", "type": "nominal"}}
+        }
+      ],
+      "center": true
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "color": "independent"
+    }
+  },
+  "config": {
+    "background": "transparent",
+    "view": {"stroke": "transparent"},
+    "title": {"color": "black", "subtitleColor": "gray"},
+    "axis": {"titleColor": "#000000", "labelColor": "#000000"},
+    "legend": {
+      "titleColor": "#000000", 
+      "labelColor": "black",
+      "labelFontSize": 14,
+      "titleFontSize": 16
+    }
+  }
+}
+

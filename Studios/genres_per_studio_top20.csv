@@ -1,0 +1,376 @@
+studio,genre,count
+20th Century Fox,Action,248
+20th Century Fox,Adventure,252
+20th Century Fox,Animation,53
+20th Century Fox,Comedy,631
+20th Century Fox,Crime,228
+20th Century Fox,Documentary,44
+20th Century Fox,Drama,701
+20th Century Fox,Family,122
+20th Century Fox,Fantasy,87
+20th Century Fox,History,62
+20th Century Fox,Horror,80
+20th Century Fox,Music,142
+20th Century Fox,Mystery,141
+20th Century Fox,Romance,353
+20th Century Fox,Science Fiction,142
+20th Century Fox,TV Movie,11
+20th Century Fox,Thriller,249
+20th Century Fox,War,113
+20th Century Fox,Western,116
+ARD,Action,20
+ARD,Adventure,30
+ARD,Animation,1
+ARD,Comedy,649
+ARD,Crime,101
+ARD,Documentary,97
+ARD,Drama,756
+ARD,Family,124
+ARD,Fantasy,9
+ARD,History,47
+ARD,Horror,2
+ARD,Music,40
+ARD,Mystery,17
+ARD,Romance,241
+ARD,Science Fiction,11
+ARD,TV Movie,585
+ARD,Thriller,71
+ARD,War,10
+ARTE,Action,5
+ARTE,Adventure,13
+ARTE,Animation,99
+ARTE,Comedy,142
+ARTE,Crime,59
+ARTE,Documentary,1942
+ARTE,Drama,521
+ARTE,Family,17
+ARTE,Fantasy,21
+ARTE,History,368
+ARTE,Horror,9
+ARTE,Music,265
+ARTE,Mystery,33
+ARTE,Romance,62
+ARTE,Science Fiction,13
+ARTE,TV Movie,497
+ARTE,Thriller,55
+ARTE,War,48
+ARTE,Western,2
+BBC,Action,69
+BBC,Adventure,193
+BBC,Animation,60
+BBC,Comedy,452
+BBC,Crime,154
+BBC,Documentary,1650
+BBC,Drama,1192
+BBC,Family,68
+BBC,Fantasy,53
+BBC,History,221
+BBC,Horror,74
+BBC,Music,364
+BBC,Mystery,105
+BBC,Romance,94
+BBC,Science Fiction,227
+BBC,TV Movie,929
+BBC,Thriller,84
+BBC,War,67
+BBC,Western,1
+Canal+,Action,86
+Canal+,Adventure,97
+Canal+,Animation,50
+Canal+,Comedy,505
+Canal+,Crime,151
+Canal+,Documentary,219
+Canal+,Drama,721
+Canal+,Family,65
+Canal+,Fantasy,51
+Canal+,History,63
+Canal+,Horror,51
+Canal+,Music,35
+Canal+,Mystery,59
+Canal+,Romance,184
+Canal+,Science Fiction,26
+Canal+,TV Movie,48
+Canal+,Thriller,195
+Canal+,War,47
+Canal+,Western,11
+Columbia Pictures,Action,371
+Columbia Pictures,Adventure,321
+Columbia Pictures,Animation,163
+Columbia Pictures,Comedy,1164
+Columbia Pictures,Crime,400
+Columbia Pictures,Documentary,41
+Columbia Pictures,Drama,925
+Columbia Pictures,Family,108
+Columbia Pictures,Fantasy,99
+Columbia Pictures,History,45
+Columbia Pictures,Horror,86
+Columbia Pictures,Music,160
+Columbia Pictures,Mystery,183
+Columbia Pictures,Romance,417
+Columbia Pictures,Science Fiction,116
+Columbia Pictures,TV Movie,4
+Columbia Pictures,Thriller,238
+Columbia Pictures,War,104
+Columbia Pictures,Western,392
+France Télévisions,Action,3
+France Télévisions,Adventure,11
+France Télévisions,Animation,18
+France Télévisions,Comedy,129
+France Télévisions,Crime,103
+France Télévisions,Documentary,725
+France Télévisions,Drama,239
+France Télévisions,Family,23
+France Télévisions,Fantasy,12
+France Télévisions,History,164
+France Télévisions,Horror,1
+France Télévisions,Music,91
+France Télévisions,Mystery,52
+France Télévisions,Romance,32
+France Télévisions,Science Fiction,2
+France Télévisions,TV Movie,275
+France Télévisions,Thriller,32
+France Télévisions,War,53
+Metro-Goldwyn-Mayer,Action,188
+Metro-Goldwyn-Mayer,Adventure,214
+Metro-Goldwyn-Mayer,Animation,170
+Metro-Goldwyn-Mayer,Comedy,994
+Metro-Goldwyn-Mayer,Crime,318
+Metro-Goldwyn-Mayer,Documentary,348
+Metro-Goldwyn-Mayer,Drama,1114
+Metro-Goldwyn-Mayer,Family,145
+Metro-Goldwyn-Mayer,Fantasy,70
+Metro-Goldwyn-Mayer,History,136
+Metro-Goldwyn-Mayer,Horror,85
+Metro-Goldwyn-Mayer,Music,277
+Metro-Goldwyn-Mayer,Mystery,137
+Metro-Goldwyn-Mayer,Romance,672
+Metro-Goldwyn-Mayer,Science Fiction,62
+Metro-Goldwyn-Mayer,TV Movie,10
+Metro-Goldwyn-Mayer,Thriller,216
+Metro-Goldwyn-Mayer,War,129
+Metro-Goldwyn-Mayer,Western,127
+Mosfilm,Action,84
+Mosfilm,Adventure,138
+Mosfilm,Animation,15
+Mosfilm,Comedy,348
+Mosfilm,Crime,99
+Mosfilm,Documentary,32
+Mosfilm,Drama,925
+Mosfilm,Family,87
+Mosfilm,Fantasy,45
+Mosfilm,History,151
+Mosfilm,Horror,5
+Mosfilm,Music,70
+Mosfilm,Mystery,74
+Mosfilm,Romance,313
+Mosfilm,Science Fiction,34
+Mosfilm,TV Movie,50
+Mosfilm,Thriller,29
+Mosfilm,War,197
+Mosfilm,Western,6
+Nikkatsu Corporation,Action,246
+Nikkatsu Corporation,Adventure,18
+Nikkatsu Corporation,Animation,18
+Nikkatsu Corporation,Comedy,180
+Nikkatsu Corporation,Crime,275
+Nikkatsu Corporation,Documentary,5
+Nikkatsu Corporation,Drama,881
+Nikkatsu Corporation,Family,4
+Nikkatsu Corporation,Fantasy,20
+Nikkatsu Corporation,History,30
+Nikkatsu Corporation,Horror,132
+Nikkatsu Corporation,Music,29
+Nikkatsu Corporation,Mystery,41
+Nikkatsu Corporation,Romance,148
+Nikkatsu Corporation,Science Fiction,28
+Nikkatsu Corporation,Thriller,113
+Nikkatsu Corporation,War,19
+Nikkatsu Corporation,Western,14
+ONF | NFB,Action,1
+ONF | NFB,Adventure,12
+ONF | NFB,Animation,877
+ONF | NFB,Comedy,106
+ONF | NFB,Crime,11
+ONF | NFB,Documentary,1371
+ONF | NFB,Drama,205
+ONF | NFB,Family,47
+ONF | NFB,Fantasy,34
+ONF | NFB,History,59
+ONF | NFB,Horror,8
+ONF | NFB,Music,78
+ONF | NFB,Mystery,4
+ONF | NFB,Romance,22
+ONF | NFB,Science Fiction,6
+ONF | NFB,TV Movie,10
+ONF | NFB,Thriller,5
+ONF | NFB,War,43
+ONF | NFB,Western,6
+Paramount,Action,296
+Paramount,Adventure,285
+Paramount,Animation,122
+Paramount,Comedy,1010
+Paramount,Crime,265
+Paramount,Documentary,103
+Paramount,Drama,1026
+Paramount,Family,115
+Paramount,Fantasy,76
+Paramount,History,63
+Paramount,Horror,102
+Paramount,Music,241
+Paramount,Mystery,173
+Paramount,Romance,563
+Paramount,Science Fiction,128
+Paramount,TV Movie,27
+Paramount,Thriller,268
+Paramount,War,102
+Paramount,Western,200
+RKO Radio Pictures,Action,70
+RKO Radio Pictures,Adventure,84
+RKO Radio Pictures,Animation,110
+RKO Radio Pictures,Comedy,486
+RKO Radio Pictures,Crime,141
+RKO Radio Pictures,Documentary,66
+RKO Radio Pictures,Drama,364
+RKO Radio Pictures,Family,19
+RKO Radio Pictures,Fantasy,13
+RKO Radio Pictures,History,15
+RKO Radio Pictures,Horror,20
+RKO Radio Pictures,Music,92
+RKO Radio Pictures,Mystery,89
+RKO Radio Pictures,Romance,270
+RKO Radio Pictures,Science Fiction,5
+RKO Radio Pictures,TV Movie,1
+RKO Radio Pictures,Thriller,69
+RKO Radio Pictures,War,45
+RKO Radio Pictures,Western,143
+Shochiku,Action,115
+Shochiku,Adventure,33
+Shochiku,Animation,72
+Shochiku,Comedy,260
+Shochiku,Crime,90
+Shochiku,Documentary,8
+Shochiku,Drama,690
+Shochiku,Family,26
+Shochiku,Fantasy,49
+Shochiku,History,51
+Shochiku,Horror,60
+Shochiku,Music,35
+Shochiku,Mystery,45
+Shochiku,Romance,120
+Shochiku,Science Fiction,42
+Shochiku,TV Movie,7
+Shochiku,Thriller,43
+Shochiku,War,22
+Shochiku,Western,1
+TOHO,Action,294
+TOHO,Adventure,151
+TOHO,Animation,242
+TOHO,Comedy,289
+TOHO,Crime,106
+TOHO,Documentary,29
+TOHO,Drama,584
+TOHO,Family,67
+TOHO,Fantasy,119
+TOHO,History,53
+TOHO,Horror,81
+TOHO,Music,42
+TOHO,Mystery,107
+TOHO,Romance,157
+TOHO,Science Fiction,159
+TOHO,TV Movie,8
+TOHO,Thriller,69
+TOHO,War,59
+Toei Company,Action,861
+Toei Company,Adventure,328
+Toei Company,Animation,66
+Toei Company,Comedy,287
+Toei Company,Crime,462
+Toei Company,Documentary,14
+Toei Company,Drama,895
+Toei Company,Family,32
+Toei Company,Fantasy,144
+Toei Company,History,120
+Toei Company,Horror,87
+Toei Company,Music,31
+Toei Company,Mystery,108
+Toei Company,Romance,92
+Toei Company,Science Fiction,350
+Toei Company,TV Movie,16
+Toei Company,Thriller,83
+Toei Company,War,27
+Toei Company,Western,2
+Universal Pictures,Action,383
+Universal Pictures,Adventure,324
+Universal Pictures,Animation,128
+Universal Pictures,Comedy,938
+Universal Pictures,Crime,313
+Universal Pictures,Documentary,67
+Universal Pictures,Drama,775
+Universal Pictures,Family,138
+Universal Pictures,Fantasy,117
+Universal Pictures,History,49
+Universal Pictures,Horror,227
+Universal Pictures,Music,241
+Universal Pictures,Mystery,178
+Universal Pictures,Romance,402
+Universal Pictures,Science Fiction,144
+Universal Pictures,TV Movie,18
+Universal Pictures,Thriller,321
+Universal Pictures,War,80
+Universal Pictures,Western,328
+Warner Bros. Pictures,Action,386
+Warner Bros. Pictures,Adventure,306
+Warner Bros. Pictures,Animation,479
+Warner Bros. Pictures,Comedy,1253
+Warner Bros. Pictures,Crime,427
+Warner Bros. Pictures,Documentary,151
+Warner Bros. Pictures,Drama,1147
+Warner Bros. Pictures,Family,218
+Warner Bros. Pictures,Fantasy,142
+Warner Bros. Pictures,History,94
+Warner Bros. Pictures,Horror,102
+Warner Bros. Pictures,Music,356
+Warner Bros. Pictures,Mystery,176
+Warner Bros. Pictures,Romance,555
+Warner Bros. Pictures,Science Fiction,123
+Warner Bros. Pictures,TV Movie,10
+Warner Bros. Pictures,Thriller,309
+Warner Bros. Pictures,War,137
+Warner Bros. Pictures,Western,147
+ZDF,Action,14
+ZDF,Adventure,34
+ZDF,Animation,35
+ZDF,Comedy,417
+ZDF,Crime,291
+ZDF,Documentary,748
+ZDF,Drama,967
+ZDF,Family,108
+ZDF,Fantasy,50
+ZDF,History,146
+ZDF,Horror,17
+ZDF,Music,118
+ZDF,Mystery,48
+ZDF,Romance,166
+ZDF,Science Fiction,30
+ZDF,TV Movie,410
+ZDF,Thriller,168
+ZDF,War,41
+ZDF,Western,4
+Česká televize,Action,2
+Česká televize,Adventure,21
+Česká televize,Animation,44
+Česká televize,Comedy,220
+Česká televize,Crime,48
+Česká televize,Documentary,583
+Česká televize,Drama,357
+Česká televize,Family,161
+Česká televize,Fantasy,136
+Česká televize,History,75
+Česká televize,Horror,4
+Česká televize,Music,153
+Česká televize,Mystery,9
+Česká televize,Romance,51
+Česká televize,Science Fiction,8
+Česká televize,TV Movie,167
+Česká televize,Thriller,19
+Česká televize,War,15

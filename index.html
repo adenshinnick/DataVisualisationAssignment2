@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Over the Years</title>
+
+    <!-- Import Vega, Vega-Lite, and Vega-Embed -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <!-- import graphs --> 
+    <script src="graphs.js" defer></script>
+
+    <!-- Import pure.css for grid layout -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" xintegrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+</head>
+<body>
+
+    <div class="page">
+        <!-- Main Title Section -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <h1>Movies Over the Years</h1>
+                <p class="intro">An interactive, data-driven story exploring the evolution of cinema. This journey will take us through the growth of genres, the rise of major studios, and the changing nature of the movies we watch.</p>
+            </div>
+        </div>
+
+        <!-- SECTION 1: GENERAL MOVIE TRENDS -->
+        <div class="section-container">
+            <h2>The Big Picture</h2>
+            <p class="section-intro">How has the landscape of cinema changed over the decades? As the world grows and changes, films must change with it. How have the production of genres changed over time? Have different countries begun making more movies? Explore the change in the world of cinema over the past 5 decades.</p>
+            
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <h3>A World of Cinema</h3>
+                    <p class = centre>This world map visualizes the number of unique movies produced by each country. Use the slider to filter by year and see how filmmaking hubs have emerged and evolved across the globe over time.</p>
+                    <div id="map" class="vis-container"></div>
+                </div>
+            </div>
+
+            <div class="pure-g">   
+                <div class="pure-u-1-3">
+                    <div class="description description-left">
+                        <h3>The Growth of Cinema by Genre</h3>
+                        <p>The number of movies produced each year has exploded. This chart shows the total number of films released over time, broken down by their primary genre, illustrating the shifting tastes of audiences and the sheer scale of the industry's expansion.</p>
+                        <p> Throughout the years, it is obvious that drama films and documentaries are the most popular out of them all, however comedies seem to be climbing in cultural significance as well. An interesting point to note about the data on the right is the year that COVID-19 started. The only drop in movies from year to year can be found at this exact year, obviously due to lockdowns and restrictions.</p>
+                    </div>
+                </div>
+                <div class="pure-u-2-3">
+                    <div id="genre-trends-chart" class="vis-container"></div>
+                </div>
+            </div>
+
+            <div class="pure-g">
+                <div class="pure-u-2-3">
+                    <div id="runtimescatterplot" class="vis-container"></div>
+                </div>
+                <div class="pure-u-1-3">
+                    <div class="description description-right">
+                        <h3>The Anatomy of Movie Runtimes</h3>
+                        <p>Have movies gotten longer? This chart shows the density of movie runtimes over 5-year periods. The size of the circle indicates how many films were produced in that time and runtime bracket, revealing a clear trend towards a standard 90-100 minute runtime.</p>
+                        <p>With the increase in social media and phone usage, it is only sensible to assume that people's attention spans have gotten shorter. Coincidentally, or maybe not, is the explosion in the amount of 90 minute films being made.</p>                                                                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SECTION 2: STUDIO ANALYSIS -->
+        <div class="section-container">
+            <h2>Inside Hollywood: Studio Analysis</h2>
+            <p class="section-intro">Explore the major players in the film industry, from the studios that produce the most films to their unique creative fingerprints.</p>
+            
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div id="studiobar" class="vis-container"></div>
+                </div>
+            </div>
+
+            
+        </div>
+
+
+        <!-- SECTION 3: RATING ANALYSIS -->
+        <div class="section-container">
+            <h2>What Makes a Good Movie?</h2>
+            <p class="section-intro">Dive into what the data says about critical acclaim. These charts explore the relationship between a movie's genre, its runtime, and its eventual rating.</p>
+            
+            <div class="pure-g">
+                <div class="pure-u-1-2">
+                    <div class="description description-left">
+                        <h3>Critical Acclaim by Genre</h3>
+                        <p>While some genres are more popular, which ones are consistently good? This radial chart compares the average rating for each major genre. The length of each bar shows the average critical rating, providing a clear comparison of which types of films tend to be the most well-received.</p>
+                    </div>
+                </div>
+                <div class="pure-u-1-2">
+                    <div id="genreratings" class="vis-container"></div>
+                </div>
+            </div>
+
+            <div class="pure-g">
+                <div class="pure-u-1-2">
+                     <div id="runtimevsratings" class="vis-container"></div>
+                </div>
+                <div class="pure-u-1-2">
+                     <div class="description description-right1">
+                        <h3>The Sweet Spot</h3>
+                        <p>Is there a "perfect" runtime for a critically acclaimed film? This heatmap shows the relationship between a movie's runtime and its rating. The brightest areas show the highest concentration of films, suggesting that the most common ground for successful filmmaking lies in the 90-120 minute range with a rating between 3.5 and 4.5.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pure-g">
+                <div class="pure-u-1-2">
+                     <div class="description description-right1">
+                        <h3>Average Critics Ratings Through the Years</h3>
+                        <p>Over the years, critics have gotten harsher and harsher. Or have movies gotten worse? It is hard to tell without having seen every movie, but the average consenseus is that while movies are being made with higher and higher quality, the sheer number of films being made means that the bar continues to get higher, and critics become harsher and harsher.</p>
+                    </div>
+                </div>
+
+                <div class="pure-u-1-2">
+                     <div id="avgratings" class="vis-container"></div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+

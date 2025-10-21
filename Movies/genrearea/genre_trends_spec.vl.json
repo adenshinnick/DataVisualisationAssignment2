@@ -1,0 +1,103 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A stacked area chart showing the total number of movies released per year, with an annotation for the COVID-19 pandemic.",
+  "width": 600,
+  "height": 300,
+  "layer": [
+    {
+      "data": {"url": "Movies/genrearea/genre_trends.csv"},
+      "mark": {
+        "type": "area",
+        "tooltip": true,
+        "interpolate": "monotone",
+        "stroke": "white",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "temporal",
+          "title": "Year",
+          "scale": {
+            "domainMin": {"year": 1910},
+            "domainMax": {"year": 2024}
+          },
+          "axis": {
+            "titleColor": "#000000",
+            "labelColor": "#000000",
+            "labelFontSize": 14,
+            "titleFontSize": 16,
+            "grid": false,
+            "domainColor": "#000000",
+            "tickColor": "#4B5563"
+          }
+        },
+        "y": {
+          "field": "count",
+          "type": "quantitative",
+          "title": "Total Number of Movies Released",
+          "stack": "zero",
+          "axis": {
+            "titleColor": "#000000",
+            "labelColor": "#000000",
+            "labelFontSize": 14,
+            "titleFontSize": 16,
+            "gridColor": "#dddddd",
+            "domain": false
+          }
+        },
+        "color": {
+          "field": "genre",
+          "type": "nominal",
+          "title": "Genre",
+          "scale": {"scheme": "tableau20"},
+          "legend": {
+            "titleColor": "#000000",
+            "labelColor": "#000000",
+            "labelFontSize": 13,
+            "titleFontSize": 15
+          }
+        },
+        "tooltip": [
+          {"field": "year", "type": "temporal", "title": "Year", "format": "%Y"},
+          {"field": "genre", "type": "nominal", "title": "Genre"},
+          {"field": "count", "type": "quantitative", "title": "Movies Released"}
+        ]
+      }
+    },
+    {
+      "data": {"values": [{"year": "2019-01-01"}]},
+      "mark": {"type": "rule", "stroke": "black", "strokeDash": [4, 2], "strokeWidth": 2},
+      "encoding": {"x": {"field": "year", "type": "temporal"}}
+    },
+    {
+      "data": {"values": [{"year": "2019-01-01", "text": "COVID Pandemic Begins"}]},
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dx": -5,
+        "dy": -30,
+        "angle": 0,
+        "fontWeight": "bold",
+        "fontSize": 16
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "temporal"},
+        "y": {"value": 15},
+        "text": {"field": "text", "type": "nominal"}
+      }
+    }
+  ],
+  "config": {
+    "background": "transparent",
+    "view": {"stroke": "transparent"},
+    "axis": {
+      "labelFont": "sans-serif",
+      "titleFont": "sans-serif"
+    },
+    "legend": {
+      "labelFont": "sans-serif",
+      "titleFont": "sans-serif"
+    }
+  }
+}

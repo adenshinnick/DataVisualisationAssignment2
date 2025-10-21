@@ -1,0 +1,97 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 550,
+  "height": 400,
+  "data": {"url": "ratings/avgratings/avgratings.csv"},
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "point": true,
+        "tooltip": true,
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "title": "Year",
+          "axis": {"format": "%Y"}
+        },
+        "y": {
+          "field": "Average Rotten Tomatoes Rating",
+          "type": "quantitative",
+          "title": "Average Critic Rating (%)",
+          "scale": {"domain": [0, 100]}
+        },
+        "tooltip": [
+          {"field": "Year", "type": "temporal", "format": "%Y", "title": "Year"},
+          {
+            "field": "Average Rotten Tomatoes Rating",
+            "type": "quantitative",
+            "title": "Average Rating",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "aggregate": [{
+            "op": "mean",
+            "field": "Average Rotten Tomatoes Rating",
+            "as": "overall_average"
+          }]
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "stroke": "firebrick",
+        "strokeWidth": 2,
+        "strokeDash": [8, 4],
+        "opacity": 0.8
+      },
+      "encoding": {
+        "y": {
+          "field": "overall_average",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "aggregate": [{
+            "op": "mean",
+            "field": "Average Rotten Tomatoes Rating",
+            "as": "overall_average"
+          }]
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dx": -5,
+        "dy": -5,
+        "fontSize": 12,
+        "fontStyle": "italic",
+        "color": "firebrick"
+      },
+      "encoding": {
+        "text": {"field": "overall_average", "type": "quantitative", "format": ".1f"},
+        "x": {"value": 795},
+        "y": {"field": "overall_average", "type": "quantitative"}
+      }
+    }
+  ],
+  "config": {
+    "background": "transparent",
+    "view": {"stroke": "transparent"},
+    "axis": {
+      "labelColor": "black",
+      "titleColor": "black"
+    }
+  }
+}

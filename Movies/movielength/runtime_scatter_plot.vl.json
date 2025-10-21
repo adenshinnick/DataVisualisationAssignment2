@@ -1,0 +1,79 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ 
+  "description": "A 2D histogram showing the density of movie runtimes over binned years.",
+  "data": {"url": "Movies/movielength/binned_runtime_data_10min.csv"},
+  "width": 640,
+  "height": 500,
+  "transform": [
+    {
+      "filter": "datum.year_bin >= 1980 && datum.year_bin <= 2024 && datum.runtime_bin >= 60 && datum.runtime_bin <= 200"
+    },
+    {"calculate": "toNumber(datum.year_bin) + 4", "as": "end_year"},
+    {"calculate": "datum.year_bin + '-' + datum.end_year", "as": "year_range"}
+  ],
+  "mark": {
+    "type": "circle",
+    "color": "#1f77b4"
+  },
+  "encoding": {
+    "x": {
+      "field": "year_range",
+      "type": "ordinal",
+      "sort": {"field": "year_bin"},
+      "title": "Year of Release",
+      "axis": {
+        "titleColor": "#000000",
+        "labelColor": "#000000",
+        "labelFontSize": 12,
+        "titleFontSize": 16,
+        "grid": false,
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "runtime_bin",
+      "type": "quantitative",
+      "title": "Runtime (10 minute steps, inclusive)",
+      "scale": {"domainMin": 75, "domainMax": 200},
+      "axis": {
+            "titleColor": "#000000",
+            "labelColor": "#000000",
+            "labelFontSize": 12,
+            "titleFontSize": 16,
+            "gridColor": "#dddddd",
+            "domain": false
+      }
+    },
+    "size": {
+      "field": "count",
+      "type": "quantitative",
+      "title": "Number of Movies",
+      "scale": {"range": [50, 1500]},
+      "legend": null
+    },
+    "tooltip": [
+      {
+        "field": "year_range",
+        "type": "nominal",
+        "title": "Years"
+      },
+      {
+        "field": "runtime_bin",
+        "type": "quantitative",
+        "title": "Runtime"
+      },
+      {
+        "field": "count",
+        "type": "quantitative",
+        "title": "Number of Movies"
+      }
+    ]
+  },
+  "config": {
+    "background": "transparent",
+    "view": {"stroke": "transparent"},
+    "title": {"color": "#E5E7EB", "subtitleColor": "#9CA3AF"}
+  }
+}
+

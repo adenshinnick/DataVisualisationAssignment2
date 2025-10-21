@@ -1,0 +1,119 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Radial bar chart of average ratings by genre with reference rings, labels, tooltips, and a highlighted annotation.",
+  "data": {"url": "ratings/genreratings/average_rating_per_genre.csv"},
+  "width": 400,
+  "height": 400,
+  "encoding": {
+    "theta": {"field": "Genre", "type": "nominal", "sort": null},
+    "radius": {
+      "field": "Rating",
+      "type": "quantitative",
+      "scale": {"domain": [0, 5], "range": [0, 250]}
+    },
+    "color": {
+      "field": "Genre",
+      "type": "nominal",
+      "legend": {
+        "title": "Genre",
+        "orient": "right",
+        "titleColor": "black",
+        "labelColor": "black"
+      },
+      "scale": {"scheme": "tableau20"}
+    },
+    "tooltip": [
+      {"field": "Genre", "type": "nominal"},
+      {"field": "Rating", "type": "quantitative", "format": ".2f"}
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {"r": 3, "Label": "3★"},
+          {"r": 4, "Label": "4★"},
+          {"r": 5, "Label": "5★"}
+        ]
+      },
+      "mark": {
+        "type": "arc",
+        "fill": null,
+        "stroke": "#B0B0B0",
+        "strokeDash": [3, 2],
+        "opacity": 0.7
+      },
+      "encoding": {
+        "theta": {
+          "field": "angle",
+          "type": "quantitative",
+          "scale": {"domain": [0, 360]}
+        },
+        "radius": {
+          "field": "r",
+          "type": "quantitative",
+          "scale": {"domain": [0, 5], "range": [0, 250]}
+        }
+      },
+      "transform": [{"calculate": "[0,360]", "as": "angle"}]
+    },
+    {
+      "mark": {
+        "type": "arc",
+        "innerRadius": 40,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"r": 3, "Label": "3★"},
+          {"r": 4, "Label": "4★"},
+          {"r": 5, "Label": "5★"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "radius": {"expr": "datum.r/5 * 250 + 8"},
+        "text": {"expr": "datum.Label"},
+        "align": "left",
+        "fontSize": 11,
+        "fill": "black"
+      }
+    },
+
+    {
+      "data": {"values": [{}]},
+      "mark": {
+        "type": "rule",
+        "stroke": "black",
+        "strokeWidth": 1.5,
+        "x": 200,
+        "x2": 280,
+        "y": 200,
+        "y2": 130
+      }
+    },
+    {
+      "data": {"values": [{}]},
+      "mark": {
+        "type": "text",
+        "text": "Action movies are the highest grossing in the world,amassing $64 billion",
+        "align": "left",
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "fill": "black",
+        "x": 285,
+        "y": 130
+      }
+    }
+    
+  ],
+  "view": {"stroke": null},
+  "config": {
+    "background": "transparent",
+    "title": {"color": "black", "subtitleColor": "gray"},
+    "arc": {"outerRadius": 600}
+  }
+}

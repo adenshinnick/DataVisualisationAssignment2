@@ -1,0 +1,67 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ 
+  "data": {"url": "ratings/lengthvsratings/runtimevsrating.csv"},
+  "width": 400,
+  "height": 400,
+  "transform": [
+    {
+      "filter": "datum.runtime >= 60 && datum.runtime <= 200"
+    }
+  ],
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "runtime",
+      "bin": {"step": 10},
+      "type": "quantitative",
+      "title": "Runtime (10-minute Bins)"
+    },
+    "y": {
+      "field": "rating",
+      "bin": {"step": 0.5},
+      "type": "quantitative",
+      "title": "Rating"
+    },
+    "color": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "scale": {"scheme": "redyellowgreen", "type": "log"},
+      "legend": {"title": "Number of Movies"}
+    },
+    "tooltip": [
+      {
+        "field": "runtime",
+        "bin": {"step": 10},
+        "type": "quantitative",
+        "title": "Runtime"
+      },
+      {
+        "field": "rating",
+        "bin": {"step": 0.5},
+        "type": "quantitative",
+        "title": "Rating"
+      },
+      {
+        "aggregate": "count",
+        "type": "quantitative",
+        "title": "Number of Movies"
+      }
+    ]
+  },
+  "config": {
+    "background": "transparent",
+    "view": {"stroke": "transparent"},
+    "title": {"color": "#E5E7EB", "subtitleColor": "#9CA3AF"},
+     "axis": {
+        "titleColor": "#000000",
+        "labelColor": "#000000",
+        "gridColor": "#4B5563"
+      },
+      "legend": {
+         "titleColor": "#000000",
+         "labelColor": "#000000"
+      }
+  }
+}
+
